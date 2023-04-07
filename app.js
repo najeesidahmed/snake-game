@@ -25,8 +25,11 @@ const changeFoodPosition = () => {
 const handleGameOver = () => {
     // clearing the timer and reloading the page on game over
     clearInterval(setIntervalId);
-    alert("Nahhh you flopped! Press OK to run it uppppp...");
-    location.reload();
+    swal("Game Over!", "Hit OK to play again", "warning").then(function(){ 
+   location.reload();
+   }
+);
+    // location.reload();
 }
 
 const initGame = () => {
